@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>POST</title>
+</head>
+<body>
+
+<h1>Калькулятор с использованием метода Post</h1>
+
+<form action="/post/process" method="post">
+    <label for="a">Первое число</label>
+    <input type="text" name="a" id="a" required style="margin-bottom: 20px"><br>
+
+    <label for="b">Второе число</label>
+    <input type="text" name="b" id="b" required style="margin-bottom: 20px"><br>
+
+    <label for="action">Операция</label>
+    <select name="action" id="action" style="margin-bottom: 20px">
+        <option value="сумма">Сложение</option>
+        <option value="вычитание">Вычитание</option>
+        <option value="умножение">Умножение</option>
+        <option value="делевние">Деление</option>
+    </select><br>
+
+    <input type="submit" name="Выполнить" value="Выполнить" style="margin-bottom: 20px"><br>
+
+</form>
+
+</body>
+</html>
