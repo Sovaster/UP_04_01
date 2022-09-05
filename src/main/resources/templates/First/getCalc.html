@@ -7,7 +7,25 @@
 <body>
 
 <h1>Калькулятор с использованием GET параметров</h1>
-Результат операции: <p th:text="${result}"></p>
-<a href="/post/calculator">Калькулятор с POST</a>
+
+<form action="/result" method="get">
+    <label for="a">Первое число</label>
+    <input type="text" name="a" id="a" required style="margin-bottom: 20px"><br>
+
+    <label for="b">Второе число</label>
+    <input type="text" name="b" id="b" required style="margin-bottom: 20px"><br>
+
+    <label for="action">Операция</label>
+    <select name="action" id="action" style="margin-bottom: 20px">
+        <option value="Cумма">Сложение</option>
+        <option value="Вычитание">Вычитание</option>
+        <option value="Умножение">Умножение</option>
+        <option value="Делевние">Деление</option>
+    </select><br>
+
+    <input type="submit" name="Выполнить" value="Выполнить" style="margin-bottom: 20px"><br>
+
+</form>
+
 </body>
 </html>

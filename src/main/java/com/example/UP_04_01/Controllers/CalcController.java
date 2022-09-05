@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalcController {
     // Калькуоятор с использованием GET параметров
     @GetMapping("/get/calculator")
+    public String GetView(){
+        return "First/getCalc";
+    }
+    @GetMapping("/result")
     public String GetController ( @RequestParam(value = "a", required = false) int a,
                                   @RequestParam(value = "b", required = false) int b,
                                   @RequestParam(value = "action", required = false) String action, Model model){
@@ -34,7 +38,7 @@ public class CalcController {
                 break;
         }
         model.addAttribute("result", result);
-        return "First/getCalc";
+        return "First/backCalcGet";
     }
 
     // Калькулятор с использованием метода POST
